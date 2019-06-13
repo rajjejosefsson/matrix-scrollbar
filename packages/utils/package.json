@@ -1,6 +1,6 @@
 {
   "name": "@matrix-scrollbar/utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Utility helpers for matrix scrollbar",
   "author": "Rasmus Josefsson <josefssonrasmus@gmail.com>",
   "homepage": "",
@@ -19,4 +19,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  }}
+  }
+}
