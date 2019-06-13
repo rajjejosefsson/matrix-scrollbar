@@ -22,7 +22,6 @@
     "react-dom": "16.8.6"
   },
   "dependencies": {
-    "@matrix-scrollbar/react": "^0.0.2",
     "@matrix-scrollbar/utils": "^0.0.2"
   },
   "publishConfig": {
