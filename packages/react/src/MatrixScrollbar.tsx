@@ -1,4 +1,5 @@
 import { Scrollbar } from '@matrix-scrollbar/core';
+import '@matrix-scrollbar/core/styles.css';
 import { isIE } from '@matrix-scrollbar/utils';
 import { Component, ReactNode } from 'react';
 import { findDOMNode } from 'react-dom';
