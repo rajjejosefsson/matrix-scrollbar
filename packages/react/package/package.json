@@ -1,7 +1,7 @@
 {
-  "name": "@matrix-scrollbar/core",
+  "name": "@matrix-scrollbar/react",
   "version": "0.0.1",
-  "description": "Matrix Scrollbar in pure javascript",
+  "description": "Matrix Scrollbar for React",
   "author": "Rasmus Josefsson <josefssonrasmus@gmail.com>",
   "homepage": "",
   "license": "MIT",
@@ -10,16 +10,19 @@
   "module": "lib/index.esm.js",
   "typings": "lib/index.d.ts",
   "types": "lib/index.d.ts",
-  "style": "styles.css",
+  "files": [
+    "lib/*"
+  ],
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib/*",
-    "styles.css"
-  ],
+  "peerDependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
   "dependencies": {
+    "@matrix-scrollbar/react": "^0.0.1",
     "@matrix-scrollbar/utils": "^0.0.1"
   },
   "publishConfig": {
