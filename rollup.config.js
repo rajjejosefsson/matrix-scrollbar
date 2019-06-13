@@ -13,7 +13,6 @@ const PACKAGE_ROOT_PATH = process.cwd();
 const INPUT_FILE = path.join(PACKAGE_ROOT_PATH, 'src/index.ts');
 const OUTPUT_DIR = path.join(PACKAGE_ROOT_PATH, 'lib');
 const PKG_JSON = require(path.join(PACKAGE_ROOT_PATH, 'package.json'));
-const HAS_STYLE = !!PKG_JSON.style;
 const bundleFormats = ['es', 'cjs'];
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 let babelRc = {};
@@ -41,21 +40,20 @@ export default bundleFormats.map((format) => ({
       ...babelRc
     }),
 
-    HAS_STYLE &&
-      postcss({
-        // extract: PKG_JSON.style,
-        plugins: [
-          postcssPresetEnv({
-            features: {
-              'custom-properties': {
-                preserve: false
-              }
+    postcss({
+      // extract: PKG_JSON.style,
+      plugins: [
+        postcssPresetEnv({
+          features: {
+            'custom-properties': {
+              preserve: false
             }
-          }),
-          customProperties(),
-          cssnano()
-        ]
-      }),
+          }
+        }),
+        customProperties(),
+        cssnano()
+      ]
+    }),
 
     terser(),
 
