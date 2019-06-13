@@ -29,9 +29,7 @@ export default bundleFormats.map((format) => ({
   external,
 
   plugins: [
-    resolve({
-      extensions
-    }),
+    resolve({ extensions, mainFields: ["main"] }), // we only want to use main not esm here to include it
 
     commonjs(),
 
