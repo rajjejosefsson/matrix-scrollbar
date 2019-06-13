@@ -5,7 +5,8 @@ import { terser } from 'rollup-plugin-terser';
 import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
-import cssnext from 'postcss-cssnext';
+import postcssPresetEnv from 'postcss-preset-env';
+import customProperties from 'postcss-custom-properties';
 import path from 'path';
 
 const PACKAGE_ROOT_PATH = process.cwd();
@@ -29,7 +30,7 @@ export default bundleFormats.map((format) => ({
   external,
 
   plugins: [
-    resolve({ extensions, mainFields: ["main"] }), // we only want to use main not esm here to include it
+    resolve({ extensions, mainFields: ['main'] }), // we only want to use main not esm here to include it
 
     commonjs(),
 
@@ -42,8 +43,18 @@ export default bundleFormats.map((format) => ({
 
     HAS_STYLE &&
       postcss({
-        plugins: [cssnext(), cssnano()],
-        extract: PKG_JSON.style
+        // extract: PKG_JSON.style,
+        plugins: [
+          postcssPresetEnv({
+            features: {
+              'custom-properties': {
+                preserve: false
+              }
+            }
+          }),
+          customProperties(),
+          cssnano()
+        ]
       }),
 
     terser(),

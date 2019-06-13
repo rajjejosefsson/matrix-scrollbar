@@ -10,10 +10,8 @@
   "module": "lib/index.esm.js",
   "typings": "lib/index.d.ts",
   "types": "lib/index.d.ts",
-  "style": "styles.css",
   "files": [
-    "lib/*",
-    "styles.css"
+    "lib/*"
   ],
   "directories": {
     "lib": "lib",
