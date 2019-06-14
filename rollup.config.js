@@ -23,6 +23,15 @@ try {
 
 const external = Object.keys(PKG_JSON.peerDependencies || {});
 
+const banner = `/*
+  @license
+	matrix-scrollbar v${PKG_JSON.version}
+
+  https://github.com/rajjejosefsson/matrix-scrollbar
+	Released under the MIT License.
+*/`;
+
+
 export default bundleFormats.map((format) => ({
   input: INPUT_FILE,
 
@@ -62,6 +71,7 @@ export default bundleFormats.map((format) => ({
 
   output: {
     file: path.join(OUTPUT_DIR, `index.${format}.js`),
-    format
+    format,
+    banner
   }
 }));
