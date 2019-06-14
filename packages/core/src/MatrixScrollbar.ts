@@ -1,6 +1,6 @@
-import { isSafari, supportsPassiveEvents } from '@matrix-scrollbar/utils';
-import { buildScrollbar } from './ScrollbarBuilder';
-import './styles.css';
+import { isSafari, supportsPassiveEvents } from "@matrix-scrollbar/utils";
+import { buildScrollbar } from "./ScrollbarBuilder";
+import "./styles.css";
 
 let supportsPassive = supportsPassiveEvents();
 
@@ -39,7 +39,13 @@ export class MatrixScrollbar {
     thumb: undefined
   };
 
-  constructor({ scrollViewport, totalHeight, minThumbHeight, className, autoHideThumb }) {
+  constructor({
+    scrollViewport,
+    totalHeight,
+    minThumbHeight,
+    className,
+    autoHideThumb
+  }) {
     this.totalHeight = totalHeight;
     this.minThumbHeight = minThumbHeight;
     this.className = className;
@@ -55,10 +61,12 @@ export class MatrixScrollbar {
   };
 
   private _createMatrixScrollbar = () => {
-    const { scrollViewport, perspectiveContainer, rail, thumb } = buildScrollbar(
-      this._scrollbar.scrollViewport,
-      this.className
-    );
+    const {
+      scrollViewport,
+      perspectiveContainer,
+      rail,
+      thumb
+    } = buildScrollbar(this._scrollbar.scrollViewport, this.className);
     this._scrollbar.scrollViewport = scrollViewport;
     this._scrollbar.perspectiveContainer = perspectiveContainer;
     this._scrollbar.rail = rail;
@@ -124,7 +132,13 @@ export class MatrixScrollbar {
     thumb.style.height = `${thumbHeight}px`;
   }
 
-  private _highlightRail({ event, scrollViewport, perspectiveContainer, rail, thumb }) {
+  private _highlightRail({
+    event,
+    scrollViewport,
+    perspectiveContainer,
+    rail,
+    thumb
+  }) {
     const SCROLL_THUMB_WIDTH = 10;
     const rect = scrollViewport.getBoundingClientRect();
     const leftSide = event.clientX - rect.left;
@@ -252,7 +266,8 @@ export class MatrixScrollbar {
 
   private readonly _onRailClick = (event: MouseEvent) => {
     const offsetY =
-      event.clientY - this._scrollbar.scrollViewport.getBoundingClientRect().top;
+      event.clientY -
+      this._scrollbar.scrollViewport.getBoundingClientRect().top;
     this._scrollbar.scrollViewport.scrollTop =
       (offsetY * this._scrollbar.scrollViewport.scrollHeight) /
       this._scrollbar.scrollViewport.offsetHeight;

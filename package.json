@@ -3,17 +3,14 @@
   "description": "",
   "author": "Rasmus Josefsson <josefssonrasmus@gmail.com>",
   "license": "MIT",
+  "repository": "https://github.com/rajjejosefsson/matrix-scrollbar",
   "scripts": {
-    "publish": "lerna run test && lerna publish",
-    "check-types": "tsc",
+    "bootstrap": "lerna bootstrap --hoist",
+    "precommit": "pretty-quick --staged",
     "build": "npm run build:files && npm run build:types",
     "build:files": "lerna exec -- rollup -c=../../rollup.config.js",
-    "build:types": "lerna exec -- tsc --emitDeclarationOnly"
-  },
-  "dependencies": {
-    "@matrix-scrollbar/core": "file:packages/core",
-    "@matrix-scrollbar/react": "file:packages/react",
-    "@matrix-scrollbar/utils": "file:packages/utils"
+    "build:types": "lerna exec -- tsc --emitDeclarationOnly",
+    "release": "lerna run test && lerna publish"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -25,13 +22,19 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@matrix-scrollbar/core": "file:packages/core",
+    "@matrix-scrollbar/react": "file:packages/react",
+    "@matrix-scrollbar/utils": "file:packages/utils",
     "@types/node": "^12.0.8",
     "@types/react": "16.8.19",
     "@types/react-dom": "^16.8.4",
     "cssnano": "^4.1.10",
+    "husky": "^2.4.1",
     "lerna": "^3.15.0",
     "postcss-custom-properties": "^8.0.10",
     "postcss-preset-env": "^6.6.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.0",
     "react": "16.8",
     "react-dom": "16.8",
     "rollup": "^1.15.1",
@@ -42,5 +45,11 @@
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-terser": "^5.0.0",
     "typescript": "^3.5.1"
+  },
+  "prettier": {},
+  "husky": {
+    "hooks": {
+      "pre-push": "lerna run lint"
+    }
   }
 }
