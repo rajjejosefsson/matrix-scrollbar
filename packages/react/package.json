@@ -1,6 +1,6 @@
 {
   "name": "@matrix-scrollbar/react",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Matrix Scrollbar for React",
   "author": "Rasmus Josefsson <josefssonrasmus@gmail.com>",
   "homepage": "",
@@ -22,7 +22,7 @@
     "react-dom": "16.8.6"
   },
   "dependencies": {
-    "@matrix-scrollbar/utils": "^0.0.11"
+    "@matrix-scrollbar/utils": "^0.0.12"
   },
   "publishConfig": {
     "access": "public"
