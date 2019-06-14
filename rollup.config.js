@@ -31,7 +31,6 @@ const banner = `/*
 	Released under the MIT License.
 */`;
 
-
 export default bundleFormats.map((format) => ({
   input: INPUT_FILE,
 
