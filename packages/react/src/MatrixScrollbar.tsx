@@ -1,7 +1,7 @@
-import { Scrollbar } from '@matrix-scrollbar/core';
-import { isIE } from '@matrix-scrollbar/utils';
-import { Component, ReactNode } from 'react';
-import { findDOMNode } from 'react-dom';
+import Scrollbar from "@matrix-scrollbar/core";
+import { isIE } from "@matrix-scrollbar/utils";
+import { Component, ReactNode } from "react";
+import { findDOMNode } from "react-dom";
 
 export interface MatrixScrollbarProps {
   children: ReactNode;
@@ -53,13 +53,14 @@ export class MatrixScrollbar extends Component<MatrixScrollbarProps> {
       className: this.props.className,
       autoHideThumb: this.props.autoHideThumb
     });
-
-    this._scrollbar.init();
   }
 
   public componentDidUpdate(nextProps: MatrixScrollbarProps) {
     if (this._scrollViewport && this._scrollbar) {
-      if (!this.props.totalHeight || this.props.totalHeight !== nextProps.totalHeight) {
+      if (
+        !this.props.totalHeight ||
+        this.props.totalHeight !== nextProps.totalHeight
+      ) {
         this._scrollbar.recount();
       }
     }

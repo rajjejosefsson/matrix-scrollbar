@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../packages/core/lib/index.umd.js"></script>
+
+    <style>
+      .list {
+        border: 2px solid black;
+        height: 400px;
+        width: 300px;
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        height: 100px;
+      }
+
+      li:nth-child(odd) {
+        background: #995cc92e;
+      }
+    </style>
+
+    <ul class="list"></ul>
+
+    <script>
+      var viewport = document.querySelector(".list");
+
+      new Array(100).fill(null).forEach((item, index) => {
+        var li = document.createElement("li");
+        li.innerText = index;
+        viewport.appendChild(li);
+      });
+
+      var matrixScrollbar = new MatrixScrollbar({
+        scrollViewport: viewport,
+        autoHideThumb: false
+      });
+    </script>
+  </body>
+</html>
