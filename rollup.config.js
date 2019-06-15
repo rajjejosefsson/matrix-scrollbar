@@ -10,9 +10,14 @@ import customProperties from "postcss-custom-properties";
 import path from "path";
 
 const PACKAGE_ROOT_PATH = process.cwd();
-const INPUT_FILE = path.join(PACKAGE_ROOT_PATH, "src/index.ts");
-const OUTPUT_DIR = path.join(PACKAGE_ROOT_PATH, "lib");
+
 const PKG_JSON = require(path.join(PACKAGE_ROOT_PATH, "package.json"));
+const IS_TYPESCRIIPT = !!PKG_JSON.types;
+const INPUT_FILE = path.join(
+  PACKAGE_ROOT_PATH,
+  `src/index.${IS_TYPESCRIIPT ? "ts" : "js"}`
+);
+const OUTPUT_DIR = path.join(PACKAGE_ROOT_PATH, "lib");
 const bundleFormats = ["es", "cjs", "umd"];
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 let babelRc = {};

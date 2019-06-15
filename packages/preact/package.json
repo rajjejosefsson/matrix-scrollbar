@@ -1,0 +1,28 @@
+{
+  "name": "@matrix-scrollbar/preact",
+  "version": "0.0.13",
+  "description": "Matrix Scrollbar for Preact",
+  "author": "Rasmus Josefsson <josefssonrasmus@gmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "browser": true,
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "files": [
+    "lib/*"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "peerDependencies": {
+    "preact": "^8.2.1",
+    "preact-compat": "^3.19.0"
+  },
+  "dependencies": {
+    "@matrix-scrollbar/utils": "^0.0.12"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

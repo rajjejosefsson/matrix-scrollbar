@@ -9,8 +9,11 @@
     "precommit": "pretty-quick --staged",
     "build": "npm run build:files && npm run build:types",
     "build:files": "lerna exec -- rollup -c=../../rollup.config.js",
-    "build:types": "lerna exec -- tsc --emitDeclarationOnly",
+    "build:types": "lerna exec --ignore @matrix-scrollbar/preact -- tsc --emitDeclarationOnly",
     "release": "lerna publish"
+  },
+  "engines": {
+    "node": ">=6"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -37,6 +40,8 @@
     "pretty-quick": "^1.11.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "preact": "^8.2.1",
+    "preact-compat": "^3.19.0",
     "rollup": "^1.15.4",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^10.0.0",
@@ -51,5 +56,11 @@
     "hooks": {
       "pre-push": "lerna run lint"
     }
+  },
+  "dependencies": {
+    "@matrix-scrollbar/core": "file:packages/core",
+    "@matrix-scrollbar/preact": "file:packages/preact",
+    "@matrix-scrollbar/react": "file:packages/react",
+    "@matrix-scrollbar/utils": "file:packages/utils"
   }
 }
