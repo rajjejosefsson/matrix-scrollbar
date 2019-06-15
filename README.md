@@ -3,10 +3,12 @@
 > A pixel perfect scrollbar (literally)
 > with the help of Matrix3D
 
-## Supported Frameworks (Currently)
+## Supported Frameworks
 
-- React
-- VanillaJS
+| Framework | NPM                                                                              |
+| --------- | -------------------------------------------------------------------------------- |
+| React     | [@matrix-scrollbar/react](https://www.npmjs.com/package/@matrix-scrollbar/react) |
+| VanillaJS | [@matrix-scrollbar/core](https://www.npmjs.com/package/@matrix-scrollbar/core)   |
 
 ## Browsers support
 
