@@ -55,7 +55,7 @@ export default class MatrixScrollbar {
     this.init();
   }
 
-  public init = () => {
+  private init = () => {
     this._createMatrixScrollbar();
     this.recount();
     this._setupEventListeners();
@@ -82,7 +82,7 @@ export default class MatrixScrollbar {
     });
   };
 
-  public get ownerWindow() {
+  private get ownerWindow() {
     return this._scrollbar.scrollViewport.ownerDocument.defaultView;
   }
 
