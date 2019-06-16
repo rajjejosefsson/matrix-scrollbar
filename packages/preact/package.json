@@ -1,6 +1,6 @@
 {
   "name": "@matrix-scrollbar/preact",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Matrix Scrollbar for Preact",
   "author": "Rasmus Josefsson <josefssonrasmus@gmail.com>",
   "homepage": "",
