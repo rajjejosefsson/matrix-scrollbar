@@ -12,7 +12,8 @@ import MatrixScrollbar from "@matrix-scrollbar/vue";
 export default {
   name: "app",
   components: {
-    HelloWorld
+    HelloWorld,
+    MatrixScrollbar
   },
   data() {
     return {
