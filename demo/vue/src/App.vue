@@ -19,13 +19,11 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import { MatrixScrollbar } from "@matrix-scrollbar/vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld,
     MatrixScrollbar
   },
   data() {

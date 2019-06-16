@@ -31,13 +31,12 @@ export class MatrixScrollbar extends Component {
       scrollViewport: this._scrollViewport,
       totalHeight: this.props.totalHeight,
       minThumbHeight: this.props.minThumbHeight || 30,
-      className: this.props.class,
+      className: this.props.className,
       autoHideThumb: this.props.autoHideThumbs || true
     });
   }
 
   componentDidUpdate(nextProps) {
-    console.log("rjrj");
     if (this._scrollViewport && this._scrollbar) {
       if (
         !this.props.totalHeight ||
