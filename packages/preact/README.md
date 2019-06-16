@@ -2,10 +2,10 @@
 
 ## Installation
 
-This module is distributed via npm which is bundled with node and
+This module is distributed via [npm](https://www.npmjs.com/package/@matrix-scrollbar/preact) which is bundled with node and
 should be installed as one of your project's `dependencies`:
 
-```
+```cmd
 npm install --save @matrix-scrollbar/preact
 ```
 
@@ -14,7 +14,7 @@ npm install --save @matrix-scrollbar/preact
 
 ## Example
 
-> [Try it out in the browser](https://codesandbox.io/s/matrix-scrollbarreact-v3pxl)
+> [Try it out in the browser](https://codesandbox.io/s/matrix-scrollbarpreact-7l33p)
 
 ```jsx
 import { MatrixScrollbar } from "@MatrixScrollbar/preact";

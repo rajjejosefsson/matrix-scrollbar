@@ -5,12 +5,13 @@
 
 ## Supported Frameworks
 
-| Framework | NPM                                                                                |
-| --------- | ---------------------------------------------------------------------------------- |
-| React     | [@matrix-scrollbar/react](https://www.npmjs.com/package/@matrix-scrollbar/react)   |
-| Preact    | [@matrix-scrollbar/preact](https://www.npmjs.com/package/@matrix-scrollbar/preact) |
-| Vue       | [@matrix-scrollbar/vue](https://www.npmjs.com/package/@matrix-scrollbar/vue)       |
-| VanillaJS | [@matrix-scrollbar/core](https://www.npmjs.com/package/@matrix-scrollbar/core)     |
+| Packages       | Github                                                                                                     |
+| -------------- | ---------------------------------------------------------------------------------------------------------- |
+| React          | [@matrix-scrollbar/react](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/react)   |
+| Preact         | [@matrix-scrollbar/preact](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/preact) |
+| Vue            | [@matrix-scrollbar/vue](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/vue)       |
+| VanillaJS/Core | [@matrix-scrollbar/core](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/core)     |
+| Utils          | [@matrix-scrollbar/utils](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/utils)   |
 
 ## Browsers support
 

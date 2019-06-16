@@ -5,7 +5,7 @@
 This module is distributed via npm which is bundled with node and
 should be installed as one of your project's `dependencies`:
 
-```
+```cmd
 npm install --save @matrix-scrollbar/vue
 ```
 
