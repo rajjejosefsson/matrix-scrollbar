@@ -1,6 +1,6 @@
 {
   "name": "@matrix-scrollbar/core",
-  "version": "0.0.17",
+  "version": "1.0.0",
   "description": "Matrix Scrollbar in pure javascript",
   "author": "Rasmus Josefsson <josefssonrasmus@gmail.com>",
   "homepage": "",
@@ -18,7 +18,7 @@
     "lib/*"
   ],
   "dependencies": {
-    "@matrix-scrollbar/utils": "^0.0.15"
+    "@matrix-scrollbar/utils": "^1.0.0"
   },
   "publishConfig": {
     "access": "public"
