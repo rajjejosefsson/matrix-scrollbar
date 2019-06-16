@@ -1,7 +1,7 @@
 import Scrollbar from "@matrix-scrollbar/core";
 import { isIE } from "@matrix-scrollbar/utils";
 
-export default {
+const MatrixScrollbar = {
   name: "MatrixScrollbar",
   props: {
     id: {
@@ -62,3 +62,5 @@ export default {
     return this.$slots.default;
   }
 };
+
+export { MatrixScrollbar };
