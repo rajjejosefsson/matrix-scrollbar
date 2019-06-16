@@ -51,13 +51,17 @@ export function placeElements({
   overflowHiddenElement.appendChild(scrollViewport);
   scrollViewport.appendChild(perspectiveContainer);
   scrollViewport.appendChild(rail);
-  scrollViewport.appendChild(thumb);
+
   if (isEdge()) {
+    perspectiveContainer.appendChild(thumb);
+
     const edgeDiv = createEdgeDiv();
     overflowHiddenElement.insertBefore(
       edgeDiv,
       overflowHiddenElement.firstElementChild
     );
+  } else {
+    scrollViewport.appendChild(thumb);
   }
 }
 
