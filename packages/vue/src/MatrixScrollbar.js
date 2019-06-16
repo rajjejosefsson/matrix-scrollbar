@@ -20,7 +20,7 @@ const MatrixScrollbar = {
       defualt: true,
       type: Boolean
     },
-    class: {
+    className: {
       default: "",
       type: String
     }
@@ -51,7 +51,7 @@ const MatrixScrollbar = {
       scrollViewport: viewport,
       totalHeight: this.totalHeight,
       minThumbHeight: TouchList.minThumbHeight,
-      className: this.class,
+      className: this.className,
       autoHideThumb: this.autoHideThumb
     });
   },
