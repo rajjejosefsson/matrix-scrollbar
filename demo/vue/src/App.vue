@@ -1,13 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div style="text-align: center">
+      <img alt="Vue logo" height="100" width="100" src="./assets/logo.png" />
+      <h1>MatrixScrollbar</h1>
+    </div>
+    <matrix-scrollbar className="styledBox">
+      <ul class="sizeOfList">
+        <li
+          v-for="(item, index) in items"
+          :key="`item-${index}`"
+          class="list-item"
+        >
+          {{ index }}
+        </li>
+      </ul>
+    </matrix-scrollbar>
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import MatrixScrollbar from "@matrix-scrollbar/vue";
+import { MatrixScrollbar } from "@matrix-scrollbar/vue";
 
 export default {
   name: "app",
@@ -28,6 +41,11 @@ export default {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serifhtml;
   color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 ul {
@@ -42,6 +60,7 @@ ul {
 }
 
 .styledBox {
+  width: auto;
   height: auto;
   border: 1px solid #e8e8e8;
   background-color: white;
