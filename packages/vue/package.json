@@ -1,6 +1,6 @@
 {
   "name": "@matrix-scrollbar/vue",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Matrix Scrollbar for Vue",
   "author": "Rasmus Josefsson <josefssonrasmus@gmail.com>",
   "homepage": "",
@@ -19,7 +19,7 @@
     "vue": "^2.5.2"
   },
   "dependencies": {
-    "@matrix-scrollbar/utils": "^0.0.14"
+    "@matrix-scrollbar/utils": "^0.0.15"
   },
   "publishConfig": {
     "access": "public"
