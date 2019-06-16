@@ -9,14 +9,9 @@
 }
 
 .matrixScrollbar__scrollViewport {
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-perspective: 1px;
   perspective: 1px;
   pointer-events: auto;
-  -webkit-user-select: initial;
-  -moz-user-select: initial;
-  -ms-user-select: initial;
   user-select: initial;
   overflow-x: hidden !important;
   display: flex;
@@ -24,20 +19,15 @@
 }
 
 [dir="rtl"] .matrixScrollbar__scrollViewport {
-  -webkit-perspective-origin: 0 0;
   perspective-origin: 0 0;
 }
 
 [dir="ltr"] .matrixScrollbar__scrollViewport {
-  -webkit-perspective-origin: 100% 0;
   perspective-origin: 100% 0;
 }
 
 .matrixScrollbar__scrollViewport-dragging {
   pointer-events: none !important;
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
   user-select: none !important;
 }
 
@@ -72,37 +62,31 @@
   border-radius: 4px;
 }
 
-.matrixScrollbar__thumb-active {
+.matrixScrollbar__thumb-railActive {
   width: 10px;
   border-radius: 8px;
 }
 
 [dir="rtl"] .matrixScrollbar__thumb {
-  -webkit-transform-origin: top left;
   transform-origin: top left;
 }
 
 [dir="ltr"] .matrixScrollbar__thumb {
-  -webkit-transform-origin: top right;
   transform-origin: top right;
 }
 .matrixScrollbar__perspectiveContainer {
-  -webkit-transform-style: preserve-3d; /* broken in safari */
-  transform-style: preserve-3d; /* broken in safari */
-  position: absolute; /* broken in safari */
+  transform-style: preserve-3d;
+  position: absolute;
   width: calc(100% - 10px);
 }
 [dir="rtl"] .matrixScrollbar__perspectiveContainer {
-  -webkit-perspective-origin: 0 0;
   perspective-origin: 0 0;
 }
 [dir="ltr"] .matrixScrollbar__perspectiveContainer {
-  -webkit-perspective-origin: 100% 0;
   perspective-origin: 100% 0;
 }
 .matrixScrollbar__overflowHiddenElement-edgeFix {
   -ms-overflow-style: none;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 

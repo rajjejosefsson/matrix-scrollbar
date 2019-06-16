@@ -160,13 +160,13 @@ export default class MatrixScrollbar {
         "matrixScrollbar__perspectiveContainer-railActive"
       );
       rail.classList.add("matrixScrollbar__rail-active");
-      thumb.classList.add("matrixScrollbar__thumb-active");
+      thumb.classList.add("matrixScrollbar__thumb-railActive");
     } else {
       perspectiveContainer.classList.remove(
         "matrixScrollbar__perspectiveContainer-railActive"
       );
       rail.classList.remove("matrixScrollbar__rail-active");
-      thumb.classList.remove("matrixScrollbar__thumb-active");
+      thumb.classList.remove("matrixScrollbar__thumb-railActive");
     }
   }
 
@@ -235,12 +235,12 @@ export default class MatrixScrollbar {
     this._isDragging = isDragging;
 
     if (isDragging) {
-      this._scrollbar.thumb.classList.add("matrixScrollbar__thumb_active");
+      this._scrollbar.thumb.classList.add("matrixScrollbar__thumb-active");
       this._scrollbar.scrollViewport.classList.add(
         "matrixScrollbar__scrollViewport-dragging"
       );
     } else {
-      this._scrollbar.thumb.classList.remove("matrixScrollbar__thumb_active");
+      this._scrollbar.thumb.classList.remove("matrixScrollbar__thumb-active");
       this._scrollbar.scrollViewport.classList.remove(
         "matrixScrollbar__scrollViewport-dragging"
       );
