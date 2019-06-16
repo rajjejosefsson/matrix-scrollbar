@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": "https://github.com/rajjejosefsson/matrix-scrollbar",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap",
     "precommit": "pretty-quick --staged",
     "build": "npm-run-all build:*",
     "build:default": "lerna exec -- rollup -c=../../rollup.config.js",
@@ -34,6 +34,7 @@
     "cssnano": "^4.1.10",
     "husky": "^2.4.1",
     "lerna": "^3.15.0",
+    "npm-run-all": "^4.1.5",
     "postcss-custom-properties": "^8.0.10",
     "postcss-preset-env": "^6.6.0",
     "preact": "^8.2.1",
