@@ -7,7 +7,7 @@ export interface MatrixScrollbarProps {
   children: ReactNode;
   autoHideThumb?: boolean;
   minThumbHeight?: number;
-  id?: string;
+  viewportId?: string;
   totalHeight?: number; // helps the calculation
   className?: string; // todo
 }
@@ -33,7 +33,9 @@ export class MatrixScrollbar extends Component<MatrixScrollbarProps> {
       return;
     }
 
-    let viewport = document.querySelector(`#${this.props.id}`) as HTMLElement;
+    let viewport = document.querySelector(
+      `#${this.props.viewportId}`
+    ) as HTMLElement;
 
     if (!viewport) {
       viewport = findDOMNode(this) as HTMLElement;

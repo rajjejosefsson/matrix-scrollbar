@@ -9,7 +9,7 @@ export interface MatrixScrollbarProps {
   minThumbHeight?: number;
   id?: string;
   totalHeight?: number; // helps the calculation
-  className?: string; // todo
+  className?: string;
 }
 
 interface ThumbElement extends HTMLElement {

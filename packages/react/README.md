@@ -30,3 +30,22 @@ function List() {
   );
 }
 ```
+
+---
+
+## Props/Settings
+
+| key              | default  | description                                      |
+| ---------------- | -------- | ------------------------------------------------ |
+| `autoHideThumb`  | true     | boolean                                          |
+| `minThumbHeight` | 30       | number                                           |
+| `viewportId`     | optional | string, if the first element is not the viewport |
+| `totalHeight`    | optional | number: rare cases to help with the calculation  |
+| `className`      | optional | string: setting class to the most outer element  |
+
+## Styling
+
+| class                    | active (appended)               |
+| ------------------------ | ------------------------------- |
+| `matrixScrollbar__thumb` | `matrixScrollbar__thumb-active` |
+| `matrixScrollbar__rail`  | `matrixScrollbar__rail-active`  |

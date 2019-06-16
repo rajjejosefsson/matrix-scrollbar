@@ -14,7 +14,7 @@ export class MatrixScrollbar extends Component {
       return;
     }
 
-    let viewport = document.querySelector(`#${this.props.id}`);
+    let viewport = document.querySelector(`#${this.props.viewportId}`);
 
     if (!viewport) {
       viewport = findDOMNode(this);

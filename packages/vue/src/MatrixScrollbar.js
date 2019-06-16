@@ -4,7 +4,7 @@ import { isIE } from "@matrix-scrollbar/utils";
 const MatrixScrollbar = {
   name: "MatrixScrollbar",
   props: {
-    id: {
+    viewportId: {
       defualt: null,
       type: String
     },
@@ -36,7 +36,7 @@ const MatrixScrollbar = {
       return;
     }
 
-    let viewport = document.querySelector(`#${this.id}`);
+    let viewport = document.querySelector(`#${this.viewportId}`);
 
     if (!viewport) {
       viewport = this.$el;
