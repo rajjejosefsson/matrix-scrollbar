@@ -1,9 +1,12 @@
-import { isEdge } from '@matrix-scrollbar/utils';
+import { isEdge } from "@matrix-scrollbar/utils";
 
 export function buildScrollbar(scrollViewport, className: string) {
-  const { perspectiveContainer, overflowHiddenElement, rail, thumb } = getElements(
-    className
-  );
+  const {
+    perspectiveContainer,
+    overflowHiddenElement,
+    rail,
+    thumb
+  } = getElements(className);
 
   placeElements({
     perspectiveContainer,
@@ -15,7 +18,13 @@ export function buildScrollbar(scrollViewport, className: string) {
 
   applyViewportStyle({ scrollViewport, overflowHiddenElement });
 
-  return { perspectiveContainer, overflowHiddenElement, rail, thumb, scrollViewport };
+  return {
+    perspectiveContainer,
+    overflowHiddenElement,
+    rail,
+    thumb,
+    scrollViewport
+  };
 }
 
 export function getElements(className: string) {
@@ -42,17 +51,22 @@ export function placeElements({
   overflowHiddenElement.appendChild(scrollViewport);
   scrollViewport.appendChild(perspectiveContainer);
   scrollViewport.appendChild(rail);
-  perspectiveContainer.appendChild(thumb);
+  scrollViewport.appendChild(thumb);
   if (isEdge()) {
     const edgeDiv = createEdgeDiv();
-    overflowHiddenElement.insertBefore(edgeDiv, overflowHiddenElement.firstElementChild);
+    overflowHiddenElement.insertBefore(
+      edgeDiv,
+      overflowHiddenElement.firstElementChild
+    );
   }
 }
 
 function applyViewportStyle({ scrollViewport, overflowHiddenElement }) {
   scrollViewport.classList.add("matrixScrollbar__scrollViewport");
   if (isEdge()) {
-    overflowHiddenElement.classList.add("matrixScrollbar__overflowHiddenElement-edgeFix");
+    overflowHiddenElement.classList.add(
+      "matrixScrollbar__overflowHiddenElement-edgeFix"
+    );
   }
 }
 
