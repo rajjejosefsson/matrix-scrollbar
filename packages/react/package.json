@@ -22,8 +22,7 @@
     "react-dom": "16.8.6"
   },
   "dependencies": {
-    "@matrix-scrollbar/core": "^1.0.3",
-    "@matrix-scrollbar/utils": "^1.0.0"
+    "@matrix-scrollbar/core": "^1.0.3"
   },
   "publishConfig": {
     "access": "public"

@@ -1,5 +1,4 @@
 import Scrollbar from "@matrix-scrollbar/core";
-import { isIE } from "@matrix-scrollbar/utils";
 
 const MatrixScrollbar = {
   name: "MatrixScrollbar",
@@ -31,11 +30,6 @@ const MatrixScrollbar = {
     };
   },
   mounted() {
-    if (isIE()) {
-      console.warn("MatrixScrollbar doesnt support Internet Explorer yet...");
-      return;
-    }
-
     let viewport = document.querySelector(`#${this.viewportId}`);
 
     if (!viewport) {

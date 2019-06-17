@@ -1,5 +1,4 @@
 import Scrollbar from "@matrix-scrollbar/core";
-import { isIE } from "@matrix-scrollbar/utils";
 import { Component } from "preact";
 import { findDOMNode } from "preact-compat";
 
@@ -9,11 +8,6 @@ export class MatrixScrollbar extends Component {
   }
 
   componentDidMount() {
-    if (isIE()) {
-      console.warn("MatrixScrollbar doesnt support Internet Explorer yet...");
-      return;
-    }
-
     let viewport = document.querySelector(`#${this.props.viewportId}`);
 
     if (!viewport) {

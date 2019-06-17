@@ -1,9 +1,9 @@
 import Scrollbar from "@matrix-scrollbar/core";
-import React, { ReactNode } from "react";
-import { findDOMNode } from "react-dom";
+import Inferno, { InfernoNode } from "inferno";
+import { findDOMNode } from "inferno-compat";
 
 export interface MatrixScrollbarProps {
-  children: ReactNode;
+  children: InfernoNode;
   autoHideThumb?: boolean;
   minThumbHeight?: number;
   viewportId?: string;
@@ -16,7 +16,7 @@ const defaultProps = {
   minThumbHeight: 30
 };
 
-export class MatrixScrollbar extends React.Component<MatrixScrollbarProps> {
+export class MatrixScrollbar extends Inferno.Component<MatrixScrollbarProps> {
   private _scrollbar: any;
   private _scrollViewport: any;
 

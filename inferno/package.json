@@ -1,13 +1,15 @@
 {
-  "name": "@matrix-scrollbar/vue",
-  "version": "1.0.4",
-  "description": "Matrix Scrollbar for Vue",
+  "name": "@matrix-scrollbar/inferno",
+  "version": "1.0.3",
+  "description": "Matrix Scrollbar for InfernoJS",
   "author": "Rasmus Josefsson <josefssonrasmus@gmail.com>",
   "homepage": "",
   "license": "MIT",
   "browser": true,
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
+  "typings": "lib/index.d.ts",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/*"
   ],
@@ -16,7 +18,8 @@
     "test": "__tests__"
   },
   "peerDependencies": {
-    "vue": "^2.5.2"
+    "inferno": "^7.1.13",
+    "inferno-compat": "^7.1.13"
   },
   "dependencies": {
     "@matrix-scrollbar/core": "^1.0.3"

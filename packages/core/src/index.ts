@@ -1,4 +1,4 @@
-import { isSafari, supportsPassiveEvents } from "@matrix-scrollbar/utils";
+import { isIE, supportsPassiveEvents } from "@matrix-scrollbar/utils";
 import { buildScrollbar } from "./ScrollbarBuilder";
 import "./styles.css";
 
@@ -46,6 +46,11 @@ export default class MatrixScrollbar {
     minThumbHeight = 30,
     autoHideThumb = false
   }) {
+    if (isIE()) {
+      // TODO:
+      // Load fallback... use regular scroll calculation?
+      return;
+    }
     this.totalHeight = totalHeight;
     this.minThumbHeight = minThumbHeight;
     this.className = className;
@@ -171,16 +176,15 @@ export default class MatrixScrollbar {
   }
 
   private readonly _setupEventListeners = () => {
-    // problem with safari when using passive for _onDragStart. (creates horizontal movment)
     this._scrollbar.thumb.addEventListener(
       "mousedown",
       this._onDragStart,
-      supportsPassive && !isSafari() ? { passive: true } : { passive: false }
+      supportsPassive ? { passive: true } : { passive: false }
     );
     this._scrollbar.rail.addEventListener(
       "mousedown",
       this._onRailClick,
-      supportsPassive && !isSafari() ? { passive: true } : { passive: false }
+      supportsPassive ? { passive: true } : { passive: false }
     );
     this.ownerWindow.addEventListener(
       "mousemove",

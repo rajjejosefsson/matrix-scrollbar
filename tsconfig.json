@@ -7,12 +7,10 @@
     "noLib": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "target": "esnext",
     "sourceMap": true,
-    "lib": ["es6"],
+    "lib": ["es6"]
   },
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
- }
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
