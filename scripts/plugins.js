@@ -48,7 +48,20 @@ export default function(options) {
   ];
 
   if (options.minify) {
-    plugins.push(terser());
+    plugins.push(
+      terser({
+        output: {
+          comments: function(node, comment) {
+            var text = comment.value;
+            var type = comment.type;
+            if (type == "comment2") {
+              // multiline comment
+              return /@preserve|@license|@cc_on/i.test(text);
+            }
+          }
+        }
+      })
+    );
   }
 
   return plugins;
