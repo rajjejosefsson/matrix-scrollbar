@@ -12,7 +12,6 @@
 | Inferno   | [@matrix-scrollbar/inferno](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/inferno) |
 | Vue       | [@matrix-scrollbar/vue](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/vue)         |
 | VanillaJS | [@matrix-scrollbar/core](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/core)       |
-| Utils     | [@matrix-scrollbar/utils](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/utils)     |
 
 ## Browsers support
 
