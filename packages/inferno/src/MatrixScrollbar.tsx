@@ -1,5 +1,5 @@
 import Scrollbar from "@matrix-scrollbar/core";
-import Inferno, { InfernoNode } from "inferno";
+import { Component, InfernoNode } from "inferno";
 import { findDOMNode } from "inferno-compat";
 
 export interface MatrixScrollbarProps {
@@ -16,7 +16,7 @@ const defaultProps = {
   minThumbHeight: 30
 };
 
-export class MatrixScrollbar extends Inferno.Component<MatrixScrollbarProps> {
+export class MatrixScrollbar extends Component<MatrixScrollbarProps> {
   private _scrollbar: any;
   private _scrollViewport: any;
 

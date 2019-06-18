@@ -1,5 +1,5 @@
 import Scrollbar from "@matrix-scrollbar/core";
-import React, { ReactNode } from "react";
+import { Component, ReactNode } from "react";
 import { findDOMNode } from "react-dom";
 
 export interface MatrixScrollbarProps {
@@ -16,7 +16,7 @@ const defaultProps = {
   minThumbHeight: 30
 };
 
-export class MatrixScrollbar extends React.Component<MatrixScrollbarProps> {
+export class MatrixScrollbar extends Component<MatrixScrollbarProps> {
   private _scrollbar: any;
   private _scrollViewport: any;
 
