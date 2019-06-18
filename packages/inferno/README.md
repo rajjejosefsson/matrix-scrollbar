@@ -1,22 +1,22 @@
-# @matrix-scrollbar/react 🔭👩‍🚀
+# @matrix-scrollbar/inferno 🔭👩‍🚀
 
 ## Installation
 
-This module is distributed via [npm](https://www.npmjs.com/package/@matrix-scrollbar/react) which is bundled with node and should be installed as one of your project's `dependencies`:
+This module is distributed via [npm](https://www.npmjs.com/package/@matrix-scrollbar/inferno) which is bundled with node and should be installed as one of your project's `dependencies`:
 
 ```cmd
-npm install --save @matrix-scrollbar/react
+npm install --save @matrix-scrollbar/inferno
 ```
 
-> This package also depends on `React`. Please make sure you
+> This package also depends on `Inferno` and `inferno-compat`. Please make sure you
 > have it installed as well.
 
 ## Example
 
-> [Try it out in the browser](https://codesandbox.io/s/matrix-scrollbarreact-v3pxl)
+> [Try it out in the browser](https://codesandbox.io/s/matrix-scrollbarinferno-cuslj)
 
 ```jsx
-import { MatrixScrollbar } from "@MatrixScrollbar/react";
+import { MatrixScrollbar } from "@MatrixScrollbar/inferno";
 
 function List() {
   return (
