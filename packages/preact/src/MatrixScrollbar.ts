@@ -16,7 +16,7 @@ export interface MatrixScrollbarProps {
   class?: string;
 }
 
-export class MatrixScrollbar extends Component<MatrixScrollbarProps> {
+export class MatrixScrollbar extends Component<MatrixScrollbarProps, {}> {
   private _scrollbar: any;
   private _scrollViewport: any;
 
