@@ -5,13 +5,13 @@
 
 ## Supported Frameworks
 
-| Packages  | Github                                                                                                       |
-| --------- | ------------------------------------------------------------------------------------------------------------ |
-| React     | [@matrix-scrollbar/react](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/react)     |
-| Preact    | [@matrix-scrollbar/preact](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/preact)   |
-| Inferno   | [@matrix-scrollbar/inferno](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/inferno) |
-| Vue       | [@matrix-scrollbar/vue](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/vue)         |
-| VanillaJS | [@matrix-scrollbar/core](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/core)       |
+| Packages  | Github                                                                                                       | Demo                                                                  |
+| --------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| React     | [@matrix-scrollbar/react](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/react)     | [CodeSandbox](https://codesandbox.io/s/matrix-scrollbarreact-v3pxl)   |
+| Preact    | [@matrix-scrollbar/preact](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/preact)   | [CodeSandbox](https://codesandbox.io/s/matrix-scrollbarpreact-7l33p)  |
+| Inferno   | [@matrix-scrollbar/inferno](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/inferno) | [CodeSandbox](https://codesandbox.io/s/matrix-scrollbarinferno-cuslj) |
+| Vue       | [@matrix-scrollbar/vue](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/vue)         | [CodeSandbox](https://codesandbox.io/s/matrix-scrollbarvue-cm25d)     |
+| VanillaJS | [@matrix-scrollbar/core](https://github.com/rajjejosefsson/matrix-scrollbar/tree/master/packages/core)       | [CodeSandbox](https://codesandbox.io/s/matrix-scrollbarcore-tn2r0)    |
 
 ## Browsers support
 
