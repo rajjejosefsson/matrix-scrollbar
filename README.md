@@ -45,7 +45,7 @@ function List() {
 ### VanillaJS
 
 ```js
-<script src="https://unpkg.com/@matrix-scrollbar/core@0.0.13/lib/index.umd.js"></script>;
+<script src="https://unpkg.com/@matrix-scrollbar/core@0.0.14/lib/umd/index.js"></script>;
 
 // you simply have to create an instance of the MatrixScrollbar
 var matrixScrollbar = new MatrixScrollbar({
