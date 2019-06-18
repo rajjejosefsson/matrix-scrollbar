@@ -24,5 +24,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "rollup": {
+    "bundledDependencies": [
+      "@matrix-scrollbar/core"
+    ]
   }
 }

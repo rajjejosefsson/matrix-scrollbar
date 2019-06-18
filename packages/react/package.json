@@ -25,5 +25,14 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "rollup": {
+    "moduleGlobals": {
+      "react": "React",
+      "react-dom": "ReactDOM"
+    },
+    "bundledDependencies": [
+      "@matrix-scrollbar/core"
+    ]
   }
 }

@@ -25,5 +25,14 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "rollup": {
+    "moduleGlobals": {
+      "preact": "Preact",
+      "preact-compat": "PreactCompat"
+    },
+    "bundledDependencies": [
+      "@matrix-scrollbar/core"
+    ]
   }
 }

@@ -25,5 +25,14 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "rollup": {
+    "moduleGlobals": {
+      "inferno": "Inferno",
+      "inferno-compat": "InfernoCompat"
+    },
+    "bundledDependencies": [
+      "@matrix-scrollbar/core"
+    ]
   }
 }

@@ -1,76 +1,50 @@
-import commonjs from "rollup-plugin-commonjs";
-import babel from "rollup-plugin-babel";
-import resolve from "rollup-plugin-node-resolve";
-import { terser } from "rollup-plugin-terser";
-import filesize from "rollup-plugin-filesize";
-import postcss from "rollup-plugin-postcss";
-import cssnano from "cssnano";
-import postcssPresetEnv from "postcss-preset-env";
-import customProperties from "postcss-custom-properties";
 import path from "path";
+import getPlugins from "./scripts/plugins";
 
-export const PACKAGE_ROOT_PATH = process.cwd();
-export const PKG_JSON = require(path.join(PACKAGE_ROOT_PATH, "package.json"));
-export const external = Object.keys(PKG_JSON.peerDependencies || {});
+export const pkgRootPath = process.cwd();
+export const pkgJSON = require(path.join(pkgRootPath, "package.json"));
+
+const {
+  version,
+  rollup: rollupConfig = {},
+  dependencies = {},
+  devDependencies = {},
+  peerDependencies = {}
+} = pkgJSON;
+
 export const bundles = ["esm", "cjs", "umd"];
-export const extensions = [".js", ".jsx", ".ts", ".tsx"];
-export const isTypescript = !!PKG_JSON.types;
-export const OUTPUT_DIR = path.join(PACKAGE_ROOT_PATH, "lib");
-export const input = path.join(
-  PACKAGE_ROOT_PATH,
-  `src/index.${isTypescript ? "ts" : "js"}`
-);
+export const isTS = !!pkgJSON.types;
+export const OUTPUT_DIR = path.join(pkgRootPath, "lib");
+export const input = path.join(pkgRootPath, `src/index.${isTS ? "ts" : "js"}`);
+
 export const banner = `/*
   @license
-	matrix-scrollbar v${PKG_JSON.version}
+	matrix-scrollbar v${pkgJSON.version}
 
   https://github.com/rajjejosefsson/matrix-scrollbar
 	Released under the MIT License.
 */`;
 
-let babelRc = {};
+function exclusionFilter(name) {
+  return !(rollupConfig.bundledDependencies || []).includes(name);
+}
 
-// if babelRc is defined lets extend it
-try {
-  babelRc = require(path.join(PACKAGE_ROOT_PATH, ".babelrc"));
-} catch (e) {}
+// All dependencies are excluded unless specified in bundledDependencies
+const deps = Object.assign({}, devDependencies, peerDependencies, dependencies);
+const external = Object.keys(deps)
+  .filter(exclusionFilter)
+  .filter(function(elem, index, self) {
+    return index === self.indexOf(elem);
+  });
 
-export const plugins = [
-  resolve({ extensions, mainFields: ["main"] }), // we only want to use main not esm here to include it
-
-  commonjs(),
-
-  babel({
-    extensions,
-    include: ["src/**/*"],
-    rootMode: "upward",
-    ...babelRc
-  }),
-
-  postcss({
-    plugins: [
-      postcssPresetEnv({
-        features: {
-          "custom-properties": {
-            preserve: false
-          }
-        }
-      }),
-      customProperties(),
-      cssnano()
-    ]
-  }),
-
-  terser(),
-
-  filesize()
-].filter(Boolean);
+const plugins = getPlugins({ minify: true });
 
 export default bundles.map(format => ({
   input,
   external,
-  plugins: [...plugins],
+  plugins,
   output: {
+    globals: rollupConfig.moduleGlobals,
     banner,
     name: "MatrixScrollbar",
     file: path.join(OUTPUT_DIR, format, `index.js`),
