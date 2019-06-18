@@ -22,7 +22,7 @@
     "inferno-compat": "7.1.13"
   },
   "dependencies": {
-    "@matrix-scrollbar/core": "^1.0.3"
+    "@matrix-scrollbar/core": "file:../core"
   },
   "publishConfig": {
     "access": "public"

@@ -18,7 +18,7 @@
     "lib/*"
   ],
   "dependencies": {
-    "@matrix-scrollbar/utils": "^1.0.0"
+    "@matrix-scrollbar/utils": "file:../utils"
   },
   "publishConfig": {
     "access": "public"

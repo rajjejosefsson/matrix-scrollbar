@@ -7,9 +7,10 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "precommit": "pretty-quick --staged",
-    "build": "npm-run-all build:*",
+    "build": "npm-run-all clean build:*",
     "build:default": "lerna exec -- rollup -c=../../rollup.config.js",
     "build:types": "lerna exec -- tsc --emitDeclarationOnly",
+    "clean": "lerna exec -- rimraf lib",
     "release": "lerna publish"
   },
   "engines": {
@@ -60,6 +61,7 @@
   },
   "dependencies": {
     "@matrix-scrollbar/core": "file:packages/core",
+    "@matrix-scrollbar/inferno": "file:packages/inferno",
     "@matrix-scrollbar/preact": "file:packages/preact",
     "@matrix-scrollbar/react": "file:packages/react",
     "@matrix-scrollbar/utils": "file:packages/utils",
