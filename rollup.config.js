@@ -12,7 +12,7 @@ import path from "path";
 export const PACKAGE_ROOT_PATH = process.cwd();
 export const PKG_JSON = require(path.join(PACKAGE_ROOT_PATH, "package.json"));
 export const external = Object.keys(PKG_JSON.peerDependencies || {});
-export const bundles = ["es", "cjs", "umd"];
+export const bundles = ["esm", "cjs", "umd"];
 export const extensions = [".js", ".jsx", ".ts", ".tsx"];
 export const isTypescript = !!PKG_JSON.types;
 export const OUTPUT_DIR = path.join(PACKAGE_ROOT_PATH, "lib");
@@ -73,7 +73,7 @@ export default bundles.map(format => ({
   output: {
     banner,
     name: "MatrixScrollbar",
-    file: path.join(OUTPUT_DIR, `index.${format}.js`),
+    file: path.join(OUTPUT_DIR, format, `index.js`),
     format
   }
 }));
