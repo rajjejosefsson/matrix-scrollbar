@@ -51,6 +51,7 @@ export default function(options) {
     plugins.push(
       terser({
         output: {
+          // Preserve licence comments
           comments: function(node, comment) {
             var text = comment.value;
             var type = comment.type;
