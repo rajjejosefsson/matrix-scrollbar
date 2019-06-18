@@ -47,10 +47,6 @@ export default function(options) {
     // })
   ];
 
-  if (!options.esnext) {
-    // plugins.push(bublePlugin());
-  }
-
   if (options.minify) {
     plugins.push(terser());
   }

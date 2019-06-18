@@ -19,7 +19,7 @@ export const input = path.join(pkgRootPath, `src/index.${isTS ? "ts" : "js"}`);
 
 export const banner = `/*
   @license
-	matrix-scrollbar v${pkgJSON.version}
+	matrix-scrollbar v${version}
 
   https://github.com/rajjejosefsson/matrix-scrollbar
 	Released under the MIT License.
@@ -33,9 +33,7 @@ function exclusionFilter(name) {
 const deps = Object.assign({}, devDependencies, peerDependencies, dependencies);
 const external = Object.keys(deps)
   .filter(exclusionFilter)
-  .filter(function(elem, index, self) {
-    return index === self.indexOf(elem);
-  });
+  .filter((elem, index, self) => index === self.indexOf(elem));
 
 const plugins = getPlugins({ minify: true });
 
