@@ -10,7 +10,10 @@
     "allowSyntheticDefaultImports": true,
     "target": "esnext",
     "sourceMap": true,
-    "lib": ["es6"]
+    "lib": ["es6", "dom"],
+    "types": [],
+    "moduleResolution": "node",
+    "baseUrl": "./"
   },
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

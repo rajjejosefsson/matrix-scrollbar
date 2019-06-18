@@ -44,7 +44,7 @@ const MatrixScrollbar = {
     this.scrollbar = new Scrollbar({
       scrollViewport: viewport,
       totalHeight: this.totalHeight,
-      minThumbHeight: TouchList.minThumbHeight,
+      minThumbHeight: this.minThumbHeight,
       className: this.className,
       autoHideThumb: this.autoHideThumb
     });

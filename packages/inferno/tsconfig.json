@@ -3,7 +3,9 @@
   "compilerOptions": {
     "outDir": "./lib",
     "lib": ["dom"],
-    "types": ["@types/node"]
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "types": ["@types/node", "inferno"]
   },
   "include": ["./src"]
 }

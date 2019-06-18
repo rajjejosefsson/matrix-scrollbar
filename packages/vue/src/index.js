@@ -1,1 +1,0 @@
-export { MatrixScrollbar } from "./MatrixScrollbar";

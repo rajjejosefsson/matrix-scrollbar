@@ -8,6 +8,8 @@
   "browser": true,
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
+  "typings": "lib/index.d.ts",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/*"
   ],
@@ -21,6 +23,9 @@
   },
   "dependencies": {
     "@matrix-scrollbar/core": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.8"
   },
   "publishConfig": {
     "access": "public"
