@@ -38,7 +38,7 @@ matrixScrollbar.disconnect();
     <title>Document</title>
   </head>
   <body>
-    <script src="https://unpkg.com/@matrix-scrollbar/core@0.0.13/lib/index.umd.js"></script>
+    <script src="https://unpkg.com/@matrix-scrollbar/core@0.0.13/lib/umd/index.js"></script>
 
     <style>
       .list {
