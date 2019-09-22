@@ -26,7 +26,7 @@
 ### React
 
 ```js
-import { MatrixScrollbar } from "@MatrixScrollbar/react";
+import { MatrixScrollbar } from "@matrix-scrollbar/react";
 
 function List() {
   return (
