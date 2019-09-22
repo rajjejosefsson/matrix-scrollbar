@@ -1,7 +1,10 @@
 # Matrix Scrollbar 🔭👩‍🚀
 
-> A pixel perfect scrollbar (literally)
-> with the help of Matrix3D
+> A pixel perfect scrollbar
+> with the help of [Matrix3D](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)
+
+## Description
+This is a scrollbar that replicates the browsers native scrollbars performance and pixel perfection to it's maximum.
 
 ## Supported Frameworks
 
@@ -55,13 +58,13 @@ var matrixScrollbar = new MatrixScrollbar({
 // ...
 
 /*************************************
-  Current API let you do following:
+  API for native JavaScript
 **************************************/
 
-// Should be called when you know that the list have changed to update the scrollbar/thumb
+// Should be called when you know that the content have changed and you need to update the scrollbar and the scrollbars thumb size
 matrixScrollbar.recount();
 
-// Don't forget to remove event listeners
+// Don't forget to remove the event listeners
 matrixScrollbar.disconnect();
 ```
 
