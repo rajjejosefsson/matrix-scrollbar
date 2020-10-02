@@ -3,8 +3,7 @@
 > A pixel perfect scrollbar
 > with the help of [Matrix3D](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)
 
-## Description
-This is a scrollbar that replicates the browsers native scrollbars performance and pixel perfection to it's maximum.
+This is a scrollbar that replicates the browsers native scrollbars performance and pixel perfection to it's maximum. [and you get this with only 10kB](https://bundlephobia.com/result?p=@matrix-scrollbar/core)
 
 ## Supported Frameworks
 
@@ -52,7 +51,7 @@ function List() {
 // you simply have to create an instance of the MatrixScrollbar
 var matrixScrollbar = new MatrixScrollbar({
   scrollViewport: viewport,
-  autoHideThumb: false
+  autoHideThumb: false,
 });
 
 // ...
